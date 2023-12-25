@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="inntext()">innertext로 표현하기</button>
+  <button onclick="innhtml()">innerhtml로 표현하기</button>
+  <h1>현재 시각: </h1>
+  <div id="current"></div>
+
+  <script>
+    var now = new Date();
+
+    function inntext() {
+      // console.log(document.getElementById('current'));
+      // document.getElementById('current').innerText = "<h1>" + now + "</h1>";
+
+      console.log(document.querySelector('#current'));
+      document.querySelector('#current').innerText = "<h1>" + now + "</h1>";
+    }
+
+    function innhtml() {
+      // console.log(document.getElementById('current'));
+      // document.getElementById('current').innerHTML = "<h1>" + now + "</h1>";
+    }
+  </script>
+</body>
+
+</html>

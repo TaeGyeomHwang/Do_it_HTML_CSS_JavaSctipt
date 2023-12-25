@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      margin-top: 50px;
+      height: 80px;
+      background-color: grey;
+      font-size: 30px;
+    }
+    /* 부모에게 줄 스타일 정의 */
+
+    .container-static {
+      position: static;
+    }
+
+    .container-relative {
+      position: relative;
+      top: 30px;
+      left: 100px;
+    }
+
+    .container-absolute {
+      position: absolute;
+    }
+
+    .container-fixed {
+      position: fixed;
+    }
+    /* 각각의 다른 부모에게 줄 스타일 정의   */
+
+    .box {
+      font-size: 12px;
+      width: 100px;
+      height: 40px;
+    }
+
+    .box-absolute {
+      left: 20px;
+      top: 20px;
+      position: absolute;
+      background-color: orange;
+    }
+
+    .box-relative {
+      left: 20px;
+      top: 20px;
+      position: relative;
+      background-color: blue;
+    }
+
+    .box-fixed {
+      left: 100px;
+      top: 20px;
+      position: fixed;
+      background-color: red;
+    }
+    /* 자식 요소들에게 줄 스타일 정의 */
+  </style>
+</head>
+
+<body>
+  <!-- 클래스는 속성 중첩 가능 -->
+  <div class="container container-static">static
+    <!-- 부모가 static -->
+    <div class="box box-absolute">absolute</div>
+    <!-- 부모가 static, 자식이 absolute (부모가 어떤지에 따라 조건부로 자리 고정: static일 경우 fixed 처럼 고정) -->
+    <div class="box box-fixed">fixed</div>
+    <div class="box box-relative">relative</div>
+    <!-- 부모가 static, 자식이 fixed  (부모가 어떤 요소든 자리를 고정) -->
+  </div>
+
+  <div class="container container-absolute">absolute
+    <!-- 부모가 absolute -->
+    <div class="box box-absolute">absolute</div>
+    <!-- 부모가 absolute, 자식이 absolute (부모 위치를 기준으로 자리 고정) -->
+    <div class="box box-fixed">fixed</div>
+    <!-- 부모가 absolute, 자식이 fixed  (부모가 어떤 요소든 자리를 고정) -->
+    <div class="box box-relative">relative</div>
+  </div>
+
+  <div class="container container-relative">relative1
+    <!-- 부모가 relative -->
+    <div class="box box-absolute">absolute</div>
+    <!-- 부모가 relative, 자식이 absolute (부모 위치를 기준으로 자리 고정) -->
+    <div class="box box-fixed">fixed</div>
+    <!-- 부모가 relative, 자식이 fixed (부모가 어떤 요소든 자리를 고정)  -->
+    <div class="box box-relative">relative</div>
+  </div>
+
+  <div class="container container-relative">relative2
+    <!-- 부모가 relative -->
+    <div class="box box-absolute">absolute</div>
+    <!-- 부모가 relative, 자식이 absolute (부모 위치를 기준으로 자리 고정) -->
+    <div class="box box-fixed">fixed</div>
+    <!-- 부모가 relative, 자식이 fixed (부모가 어떤 요소든 자리를 고정)  -->
+    <div class="box box-relative">relative</div>
+  </div>
+
+  <div class="container container-fixed">fixed
+    <!-- 부모가 fixed -->
+    <div class="box box-absolute">absolute</div>
+    <!-- 부모가 fixed, 자식이 absolute (부모 위치를 기준으로 자리 고정) -->
+    <div class="box box-fixed">fixed</div>
+    <!-- 부모가 fixed, 자식이 fixed (부모가 어떤 요소든 자리를 고정)  -->
+    <div class="box box-relative">relative</div>
+  </div>
+</body>
+
+</html>

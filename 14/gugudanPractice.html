@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var i, j, a = 0;
+    i = parseInt(prompt("시작할 단을 입력해 주세요."));
+    a = parseInt(prompt("마지막 단을 입력해 주세요."));
+
+    for (i; i < a+1; i++) {
+      document.write("<p>구구단 " + i + "단 </p>");
+      for (j = 1; j < 10; j++) {
+        document.write(i + " x " + j + " = " + j * i + "<br>");
+      }
+    }
+  </script>
+</body>
+
+</html>

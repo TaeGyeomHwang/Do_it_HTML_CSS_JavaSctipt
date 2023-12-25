@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <img src="images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" width="200" height="200" onclick="displaySrc()">
+  </div>
+
+  <script>
+    function displaySrc(){
+      // var cup = document.querySelector('#cup');
+      var cup = document.getElementById('cup');
+      cup.setAttribute("src","images/coffee-blue.jpg");
+      // src에 있는 값이 출력된다.
+    }
+  </script>
+</body>
+</html>

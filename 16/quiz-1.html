@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>현재 시각은?</title>
+  <style>
+    p {
+      margin-top: 20px;
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    .display {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <p>현재 시각 <span id="current" class="display"></span></p>
+  <script>
+    var now = new Date();
+    var currentTime = now.toLocaleTimeString();
+    document.querySelector('#current').innerHTML = currentTime;
+    // 창 열자마자 딜레이 없이 시간 표시
+
+    function displayNow() {
+      var now = new Date();
+      var currentTime = now.toLocaleTimeString();
+      document.querySelector('#current').innerHTML = currentTime;
+    }
+
+    setInterval(displayNow, 1000);   
+  </script>
+</body>
+
+</html>

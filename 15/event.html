@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="div1";></div>
+  <!-- onclick="this.style.background = 'gray'" 이런식으로 태그 안에 넣을 수도 있음 -->
+
+  <script>
+    var div1 = document.querySelector('#div1'); //문서 안에서 div1 이라는 태그를 가진 element를 가져옴
+
+    // div1.addEventListener('click', eventFunc, false);
+    // function eventFunc(){
+    //   div1.style.background = "gray";
+    // }
+
+    // div1.addEventListener('mouseup', function(){  //동일한 표현 방식
+    //   console.log("mouseup");
+    //   div1.style.background = "gray";
+    // }, false);
+
+    // div1.addEventListener('mouseout', function(){  
+    //   console.log("mouseout");
+    //   div1.style.background = "white";
+    // }, false);
+
+    window.addEventListener('change',function(){
+      console.log("change");
+      // 서버에서 리스트를 가져오는 코드
+    }, false)
+  </script>
+</body>
+
+</html>

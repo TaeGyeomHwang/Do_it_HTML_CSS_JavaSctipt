@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        #container {
+      width: 800px;
+      margin: 20px auto;
+    }
+
+    .origin {
+      width: 100px;
+      height: 100px;
+      margin: 40px;
+      float: left;
+      border: 1px solid black;
+      perspective: 200px;  
+    }
+    /* 원근감 주는 옵션  */
+
+    .origin>div {
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      /* transition: all 3s;   */
+    }
+    /* 얼마만큼의 시간동안 수행할지  */
+
+    #skewx:hover{
+      transform: skewX(90deg);
+    }
+    /* x축 쪽으로 비틀기 */
+
+    #skewy:hover{
+      transform: skewY(15deg);
+    }
+    #skewxy:hover{
+      transform: skew(-25deg,-15deg);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="origin">
+      <div id="skewx"></div>
+    </div>
+    <div class="origin">
+      <div id="skewy"></div>
+    </div>
+    <div class="origin">
+      <div id="skewxy"></div>
+    </div>
+  </div>
+</body>
+</html>

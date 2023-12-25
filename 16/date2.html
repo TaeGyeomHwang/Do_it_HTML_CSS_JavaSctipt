@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      text-align: center;
+      padding-top: 60px;
+    }
+    #current{
+      color: blue;
+      font-weight: bold;
+      font-size: larger;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>현재 시각 <span id="current"></span></p>
+  </div>
+  <script>
+    var now = new Date();
+      var currentTime = now.toLocaleTimeString();
+      document.querySelector('#current').innerHTML = currentTime;
+    function displayNow(){
+      var now = new Date();
+      var currentTime = now.toLocaleTimeString();
+      document.querySelector('#current').innerHTML = currentTime;
+    }
+    setInterval(displayNow,1000);
+  </script>
+</body>
+</html>

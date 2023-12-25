@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 1</title>
+	<style>
+		ul {
+			list-style: none;
+		}
+
+		li {
+			font-size: 20px;
+			line-height: 35px;
+		}
+
+		.check {
+			color: #ccc;
+			font-size: 20px;
+			margin-right: 25px;
+		}
+
+		.check:hover {
+			color: #222;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>할 일 목록</h1>
+	<ul>
+		<li><span class="check">&check;</span>할 일 1 </li>
+		<li><span class="check">&check;</span>할 일 2 </li>
+		<li><span class="check">&check;</span>할 일 3 </li>
+		<li><span class="check">&check;</span>할 일 4 </li>
+		<li><span class="check">&check;</span>할 일 5 </li>
+	</ul>
+
+	<script>
+		// 체크 표시를 가져와 노드 리스트 만듬
+		let checklist = document.querySelectorAll(".check");
+
+		// 노드 리스트에 있는 요소 전체를 반복하는 함수
+		for (i = 0; i < checklist.length; i++){
+		  checklist[i].addEventListener("click", function(){
+		    if(this.parentNode){
+					// 클릭이 발생한 요소 색상, 밑줄 스타일 변경
+		      this.parentNode.style.color = "#ccc";
+					this.style.textDecoration = "line-through";
+					this.parentNode.style.textDecoration = "line-through";
+		    }
+		  });
+		}
+	</script>
+</body>
+
+</html>

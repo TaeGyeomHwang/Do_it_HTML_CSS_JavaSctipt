@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      width: 969px;
+      margin: 0px auto;
+    }
+    .navi{
+      width: 960px;
+      height: 60px;
+      padding-bottom: 10px;
+      border-bottom:  2px solid #ccc;
+    }
+    .navi ul{
+      list-style: none;
+      padding-top: 10px;
+      padding-bottom: 5px;
+    }
+    /* ,로 구분하지 않으면 뒤에 있는 ul만 스타일 지정 되는 것. */
+
+    .navi ul li{
+      float: left;
+      width: 150px;
+      padding: 10px;
+    }
+    .navi a:link, .navi a:visited{
+      font-size: 14px;
+      display: block;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+    /* ,로 구분하면 둘 다에 스타일 지정 */
+
+    .navi a:hover, .navi:focus{
+      background-color: black;
+      color: white;
+    }
+    /* 마우스 올라갔을 때 */
+
+    .navi a:active{
+      background-color: red;
+    }
+    /* 마우스 클릭 시 */
+
+    .contents{
+      width: 400px;
+      margin: 30px auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    #intro:target{
+      background-color: #0069e0;
+      color: #fff;
+    }
+    #room:target{
+      background-color: #ff9844;
+      color: #fff;
+    }
+    #reservation:target{
+      background-color: #fff8dc;
+      color: #fff;
+    }
+    /* 앵커로 연결된 부분 이동, 색 변경 */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navi">
+      <ul>
+        <li><a href="#intro">이용 안내</a></li> 
+        <li><a href="#room">객실 소개</a></li>
+        <li><a href="#reservation">예약 방법 및 요금</a></li>
+        <li><a href="#ps-2.html">예약하기</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div id="intro" class="contents">
+    <h2>이용 안내</h2>
+    <p>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+      내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+      내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용  </p>
+  </div>
+
+  <div id="room" class="contents">
+    <h2>객실 소개</h2>
+    <p>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용
+       내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+       내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용  </p>
+  </div>
+
+  <div id="reservation" class="contents">
+    <h2>예약 방법 및 요금</h2>
+    <p>내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용
+       내용 내용 내용 내용내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+       내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용  </p>
+  </div>
+</body>
+</html>

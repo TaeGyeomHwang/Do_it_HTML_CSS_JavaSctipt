@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      width: 120px;
+      height: 10px;
+    }
+
+    li>a {
+      margin: 10px;
+      padding: 5px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a[href] {
+      background-color: yellow;
+      font-weight: normal;
+      border: 1px solid #eee;
+    }
+    div{
+      height: 500px;
+    }
+    #anker{
+      background-color: blue;
+    }
+    a[href="#anker"]{
+      background-color: blue;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <a>메인 메뉴 : </a>
+  <UL>
+    <li><a href="#">메뉴 1</a></li>
+    <li><a href="#">메뉴 2</a></li>
+    <li><a href="#">메뉴 3</a></li>
+    <li><a href="#anker">메뉴 4</a></li>
+  </UL>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div id="anker"></div>
+</body>
+
+</html>

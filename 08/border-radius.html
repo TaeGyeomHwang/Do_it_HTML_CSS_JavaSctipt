@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      display: block;
+      /*이미지 좌우측에 다른 요소를 붙일 수 없게 내림 */
+
+      /* display: inline-block; */
+      /* inline  요소는 콘텐츠 크기만큼만 크기가 잡힘. 
+        배치는 inline 요소와 동일. 
+        inline-block 사용시 width와 height, margin, padding 속성 지정이 가능해짐.
+
+      border-radius: 50%;
+      /* 50%일 때 원으로 표시됨. */
+
+      border-top-right-radius: 25px;
+      /* 각 꼭짓점 따로 지정 가능. */
+
+      margin: 20px auto;
+      /* 중앙으로 정렬 */
+    }
+
+    span {
+      display: inline-block;
+      width: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <img src="images/cat.jpg" alt="cat">
+  <img src="images/photo.jpg" alt="photo">
+  <p>이미지를 <span>원형</span>으로 표시하기</p>
+</body>
+
+</html>

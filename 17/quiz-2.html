@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습문제 2</title>
+	<style>
+		form {
+			margin-bottom: 30px;
+		}
+
+		input[type="text"] {
+			width: 30px;
+			height: 20px;
+			text-align: center;
+		}
+
+		button {
+			margin-left: 10px;
+		}
+
+		table {
+			width: 300px;
+		}
+
+		table,
+		td {
+			border: 1px solid #ccc;
+			border-collapse: collapse;
+		}
+
+		td {
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<form>
+		<input type="text" id="rCount" value="1">행
+		<input type="text" id="cCount" value="1">열
+		<button onclick="drawTable(); return false;">작성</button>
+	</form>
+	<div id="contents"></div>
+
+	<script>
+		function drawTable() {
+			// table 요소 생성
+			let newTable = document.createElement("table");
+
+			// 행과 열 값 가져오기
+			let rCountValue = document.querySelector("#rCount").value;
+			let cCountValue = document.querySelector("#cCount").value;
+
+			// 입력한 열의 개수만큼 tr, td, text 생성 후 
+			for (let i = 0; i < rCountValue; i++) {
+				let newTr = document.createElement("tr");
+
+				for (let j = 0; j < cCountValue; j++) {
+					let newTd = document.createElement("td");
+					let newText = document.createTextNode(i + ", " + j);
+
+					// text, td, tr을 table의 자식으로 추가
+					newTd.appendChild(newText);
+					newTr.appendChild(newTd);
+				}
+
+				newTable.appendChild(newTr);
+			}
+
+			// div 태그에 table을 자식으로 추가
+			let division = document.querySelector("#contents");
+			division.appendChild(newTable);
+		}
+	</script>
+</body>
+
+</html>

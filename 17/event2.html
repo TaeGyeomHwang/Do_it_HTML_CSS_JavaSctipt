@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      width: 400px;
+      margin: 50x auto;
+      text-align: center;
+    }
+
+    #rect {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 30px auto;
+      transition: 1s;
+    }
+
+    #rect:hover{
+      background-color: green;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <p>도형으로 마우스 포인터를 올려놓으세요.</p>
+    <div id="rect"></div>
+  </div>
+
+  <script>
+    var rect = document.querySelector("#rect");
+
+    // rect.addEventListener("mouseover", function() {
+    //   rect.style.backgroundColor = "green";
+    //   rect.style.borderRadius = "50%";
+    // });
+
+    // rect.addEventListener("mouseout", function() {
+    //   rect.style.backgroundColor = "";
+    //   rect.style.borderRadius = "";
+    // });
+  </script>
+</body>
+
+</html>

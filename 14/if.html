@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var userNumber = prompt("숫자를 입력하세요.");
+    console.log(typeof userNumber)
+
+    if (userNumber !== null && userNumber !== "") {
+      // if (userNumber % 3 == 0) {
+      //   alert("3의 배수입니다.");
+      // }else {
+      //   alert("3의 배수가 아닙니다.");
+      // }
+
+      // (userNumber % 3 === 0) ? alert("3의 배수입니다.") : alert("3의 배수가 아닙니다.");
+      
+      printString = (userNumber % 3 === 0) ? "3의 배수입니다." : "3의 배수가 아닙니다."
+    } else {
+      alert("값이 입력되지 않았습니다.");
+    }
+  </script>
+</body>
+
+</html>

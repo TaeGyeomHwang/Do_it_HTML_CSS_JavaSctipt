@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/nodelist.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form action="">
+      <input type="text" id="subject" autofocus>
+      <button onclick="newRegister(); return false;">추가</button>
+      <hr>
+      <ul id="itemList">
+
+      </ul>
+    </form>
+  </div>
+
+  <script>
+    function newRegister() {
+      // li 엘리먼트 생성
+      let newItem = document.createElement("li");
+      // input 엘리먼트
+      let subject = document.querySelector("#subject");
+      // li의 자식 생성
+      let newText = document.createTextNode(subject.value);
+
+      // li에 자식 연결
+      newItem.appendChild(newText);
+
+      // ul 엘리먼트 가져오고, ul에 li를 첫번째 자식으로 추가
+      let itemList = document.querySelector("#itemList");
+      itemList.insertBefore(newItem,itemList.childNodes[0]);
+
+      // input의 value 초기화
+      subject.value = "";
+
+
+      // 모든 li 요소 선택
+      // let items = document.querySelectorAll("li");
+      // 선택한 li 삭제 이벤트
+      // for (i = 0; i < items.length; i++){
+      //   items[i].addEventListener("click", function(){
+      //     if(this.parentNode){
+      //       this.parentNode.removeChild(this);
+      //     }
+      //   });
+      // }
+
+      // 위 코드 최적화
+      newItem.addEventListener("click",function(){
+        if(this.parentNode){
+            this.parentNode.removeChild(this);
+          }
+      });
+    }
+  </script>
+</body>
+
+</html>

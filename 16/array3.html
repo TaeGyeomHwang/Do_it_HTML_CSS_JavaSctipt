@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var numbers = [1, 2, 3, 4, 5];
+    // var newNumbers = numbers.splice(2);
+    // document.write("반환된 배열: " + newNumbers + "<br>");
+    // document.write("변경된 배열: " + numbers);
+    // 2번 인덱스부터 배열을 삭제하기.
+
+    var study = ["html", "css", "web", "jQuery"];
+    var newStudy = study.splice(2, 1);
+    document.write("반환된 배열: " + newStudy + "<br>");
+    document.write("변경된 배열: " + study + "<br>");
+
+    var newStudy2 = study.splice(2, 1, "js");
+    document.write("반환된 배열: " + newStudy2 + "<br>");
+    document.write("변경된 배열: " + study);
+    // splice() 메서드의 파라미터에 따라 배열을 원하는 대로 삭제할 수 있다.
+  </script>
+</body>
+
+</html>
